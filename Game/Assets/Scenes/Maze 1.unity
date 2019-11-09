@@ -411,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
   MaxEnemyCount: 5
+  SpawnDelay: 5
 --- !u!1 &147020018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,6 +2189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
   MaxEnemyCount: 5
+  SpawnDelay: 5
 --- !u!1 &619990498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
   MaxEnemyCount: 5
+  SpawnDelay: 5
 --- !u!1 &725134096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,6 +5252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
   MaxEnemyCount: 5
+  SpawnDelay: 5
 --- !u!1 &1474810523
 GameObject:
   m_ObjectHideFlags: 0
