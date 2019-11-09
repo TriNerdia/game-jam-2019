@@ -24,7 +24,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             spawning = true;
             yield return wait;
-            Instantiate(Enemy);
+            Instantiate(Enemy, transform.position, transform.rotation);
             spawning = false;
         }
     }
