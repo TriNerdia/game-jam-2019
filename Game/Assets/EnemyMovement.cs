@@ -8,19 +8,20 @@ public class EnemyMovement : MonoBehaviour
 
     List<Vector3> pathToFollow;
 
-    [SerializeField]
     NodeAndPathHandler nodeAndPathHandler;
+
+    Vector3 lastKnownPlayerPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        nodeAndPathHandler = GameObject.Find("PathHandler").GetComponent<NodeAndPathHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("frame counter");
         float distanceFromWalls = 0.8f;
 
         RaycastHit hit;
@@ -93,16 +94,16 @@ public class EnemyMovement : MonoBehaviour
         //Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.white, 0.5f);
         if (Physics.Raycast(transform.position, Player.transform.position - transform.position, out hit, Vector3.Distance(transform.position, Player.transform.position)) && hit.transform.tag == "Player")
         {
-            Debug.Log("Hit player");
             pathToFollow = new List<Vector3>() { Player.transform.position };
         }
         else
         {
-            Debug.Log("Missed player");
-            List<Vector3> newPath = nodeAndPathHandler.CalculatePath(transform.position);
-            if(pathToFollow == null || newPath[newPath.Count-1] != pathToFollow[pathToFollow.Count-1])
-                pathToFollow = newPath;
-
+            if (pathToFollow == null || pathToFollow.Count == 0)// || nodeAndPathHandler.NodeNearestPlayer() != lastKnownPlayerPosition)
+            {
+                Debug.Log("updating path");
+                pathToFollow = nodeAndPathHandler.CalculatePath(transform.position);
+                //lastKnownPlayerPosition = pathToFollow[pathToFollow.Count - 1];
+            }
             //Debug.Log(pathToFollow.Count);
             //foreach (Vector3 point in pathToFollow)
             //{
@@ -110,9 +111,7 @@ public class EnemyMovement : MonoBehaviour
             //}
         }
 
-        Debug.Log(pathToFollow);
-
-        transform.Translate(Vector3.Normalize(pathToFollow[0] - transform.position) * Time.deltaTime);
+        transform.Translate(Vector3.Normalize(pathToFollow[0] - transform.position) * Time.deltaTime * 2);
         if (Vector3.Distance(transform.position, pathToFollow[0]) < 0.1f)
             pathToFollow.RemoveAt(0);
     }

@@ -135,14 +135,12 @@ public class NodeAndPathHandler : MonoBehaviour
         bool firstPoint = true;
         float shortestDistance = 0;
         Point prevPoint = new Point(new Vector3());
-        Debug.Log("setting point nearest enemy");
         foreach (Point point in points)
         {
             float distance = Vector3.Distance(EnemyPosition, point.GetPos());
             RaycastHit hit;
             if (!Physics.Raycast(EnemyPosition, point.GetPos() - EnemyPosition, out hit, distance))
             {
-                Debug.Log("No object in the way");
                 if (firstPoint)
                 {
                     point.SetState('s');
@@ -158,19 +156,14 @@ public class NodeAndPathHandler : MonoBehaviour
                     prevPoint = point;
                 }
             }
-            else
-                Debug.Log(hit.transform.name);
         }
 
         Point startPoint = prevPoint;
 
-        //Debug.Log(shortestDistance);
-        //Debug.Log(prevPoint.GetPos().x);
         //find player/node nearest player
         firstPoint = true;
         shortestDistance = 0;
         prevPoint = new Point(new Vector3());
-        Debug.Log("setting point nearest player");
         foreach(Point point in points)
         {
             if (point.GetState() != 's')
@@ -178,7 +171,6 @@ public class NodeAndPathHandler : MonoBehaviour
                 float distance = Vector3.Distance(Player.transform.position, point.GetPos());
                 if (!Physics.Raycast(Player.transform.position, point.GetPos() - Player.transform.position, distance))
                 {
-                    Debug.Log("found end point");
                     if (firstPoint)
                     {
                         point.SetState('e');
@@ -199,7 +191,6 @@ public class NodeAndPathHandler : MonoBehaviour
         }
 
         Point endPoint = prevPoint;
-        Debug.Log("setting points next to start point");
         foreach (Point point in startPoint.GetConnectedPoints())
         {
             if (point.GetState() != 'e')
@@ -210,12 +201,10 @@ public class NodeAndPathHandler : MonoBehaviour
             }
         }
 
-        //Debug.Log(endPoint.GetState());
         //find path from starting point to player/node nearest player
         bool searchedAll = false;
         bool foundEnd = false;
 
-        Debug.Log("beginning search");
         while (!searchedAll)
         {
             searchedAll = true;
@@ -272,11 +261,6 @@ public class NodeAndPathHandler : MonoBehaviour
             }
         }
 
-        Debug.Log("Beggining trace back");
-        //Debug.Log(foundEnd);
-        //Debug.Log(endPoint.GetConnectedPoints().Count);
-        //Debug.Log(endPoint.GetPos().x);
-        //Debug.Log(endPoint.GetConnectedPoints()[1].GetPos().x);
         if (foundEnd)
         {
             //trace back to find the shortest route
@@ -284,7 +268,6 @@ public class NodeAndPathHandler : MonoBehaviour
             float lowestScore = 0;
             bool firstRoute = true;
 
-            Debug.Log(endPoint.GetConnectedPoints().Count);
 
             foreach (Point point in endPoint.GetConnectedPoints())
             {
@@ -295,8 +278,6 @@ public class NodeAndPathHandler : MonoBehaviour
                 route.Add(endPoint);
                 while (tracing)
                 {
-                    Debug.Log("Current point: " + currPoint);
-                    Debug.Log(currPoint.GetState());
                     route.Add(currPoint);
                     if (currPoint.GetState() == 's')
                     {
@@ -332,6 +313,36 @@ public class NodeAndPathHandler : MonoBehaviour
         }
         else
             return null;
+    }
+
+    public Vector3 NodeNearestPlayer()
+    {
+        float shortestDistance = 0;
+        Point prevPoint = new Point(new Vector3(0, 0));
+        bool firstPoint = true;
+        foreach (Point point in points)
+        {
+            if (point.GetState() != 's')
+            {
+                float distance = Vector3.Distance(Player.transform.position, point.GetPos());
+                if (!Physics.Raycast(Player.transform.position, point.GetPos() - Player.transform.position, distance))
+                {
+                    if (firstPoint)
+                    {
+                        shortestDistance = distance;
+                        prevPoint = point;
+                        firstPoint = false;
+                    }
+                    else if (distance < shortestDistance)
+                    {
+                        shortestDistance = distance;
+                        prevPoint = point;
+                    }
+                }
+            }
+        }
+
+        return prevPoint.GetPos();
     }
 
 }
