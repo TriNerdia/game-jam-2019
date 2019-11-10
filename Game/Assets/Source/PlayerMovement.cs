@@ -21,36 +21,36 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(moveUp))
         {
-            Rotation.y += 1;
-            Direction = Vector3.up;
+            Rotation.z -= 1;
+            Direction = Vector3.forward;
         }
 
         if (Input.GetKey(moveDown))
         {
-            Rotation.y -= 1;
-            Direction = Vector3.up;
+            Rotation.z += 1;
+            Direction = Vector3.forward;
         }
 
         if (Input.GetKey(moveRight))
         {
-            Rotation.x += 1;
-            Direction = Vector3.up;
+            Rotation.x -= 1;
+            Direction = Vector3.forward;
         }
 
         if (Input.GetKey(moveLeft))
         {
-            Rotation.x -= 1;
-            Direction = Vector3.up;
+            Rotation.x += 1;
+            Direction = Vector3.forward;
         }
 
         if (Rotation != Vector3.zero)
         {
-            Quaternion rotate = Quaternion.LookRotation(Vector3.forward, Rotation);
+            Quaternion rotate = Quaternion.LookRotation(Vector3.up, Rotation);
 
             // This is to prevent the rotation along these two axis. The game
             // has 3d objects within a 2d scene.
             rotate.x = 0;
-            rotate.y = 0;
+            rotate.z = 0;
             transform.rotation = rotate;
         }
 
