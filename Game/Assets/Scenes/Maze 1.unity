@@ -1901,6 +1901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5091dad3931dcd4fa44fa51fc4ed39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obj: {fileID: 0}
+  speed: 0
 --- !u!195 &392764822
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9527,7 +9529,7 @@ PrefabInstance:
     - target: {fileID: 3941015657215590352, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
         type: 3}
       propertyPath: Health
-      value: 80
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4350260523196724368, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
         type: 3}
