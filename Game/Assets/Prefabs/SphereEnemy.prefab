@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 3376672736656544397}
   - component: {fileID: 8897796118381824656}
   - component: {fileID: 6459373355728170911}
+  - component: {fileID: 920325297403719478}
   m_Layer: 0
   m_Name: SphereEnemy
   m_TagString: Enemy
@@ -173,21 +174,6 @@ MonoBehaviour:
   Health: 100
   MaxHealth: 100
   powerUp: {fileID: 4964288603200149276, guid: 1dc1ac8acc0db3547876714296a102c1, type: 3}
---- !u!114 &920325297403719478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3376672736656544403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73a082d07bf0243a2b9bd84788ba54d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sword: {fileID: 661596802021177639}
-  TargetTag: Player
-  attackKey: 108
 --- !u!114 &8897796118381824656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +210,21 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &920325297403719478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3376672736656544403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a082d07bf0243a2b9bd84788ba54d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 661596802021177639}
+  TargetTag: Player
+  attackKey: 108
 --- !u!1 &3376672737904124212
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +421,7 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: 9e6a022ec6b9e4ebe8a768967dfb0f95, type: 2}
+  - {fileID: 7400000, guid: f337a2f63d8f3564ab9d3f1e6a3af93a, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

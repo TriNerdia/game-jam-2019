@@ -208,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   MaxHealth: 100
+  powerUp: {fileID: 0}
 --- !u!114 &4350260523196724369
 MonoBehaviour:
   m_ObjectHideFlags: 0
