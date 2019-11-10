@@ -32,10 +32,11 @@ public class ObjectHealth : MonoBehaviour
             {
                 SceneManager.LoadScene("Gameover Menu", LoadSceneMode.Single);
             }
-            else if(this.gameObject.tag == "Enemy")
+            else
             {
                 Destroy(this.gameObject);
-                Instantiate(powerUp, transform.position, transform.rotation);
+                if (this.gameObject.tag == "Enemy")
+                    Instantiate(powerUp, transform.position, transform.rotation);
             }
         }
         if(tag == "Player")
