@@ -5,19 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Gameover Menu.unity
-    guid: 8958d03a700290b4ebd0f97cf38aa251
-  - enabled: 1
-    path: Assets/Scenes/TestField.unity
-    guid: ba918088dfb59d2478fd2d99ca9ed7f4
   - enabled: 1
     path: Assets/Scenes/Opening Menu.unity
     guid: f3706e74230d16e4ea86cd11d72fbe0d
   - enabled: 1
     path: Assets/Scenes/Maze 1.unity
     guid: 61bf27d7f277ef24d8786252fad0122a
+  - enabled: 1
+    path: Assets/Scenes/Gameover Menu.unity
+    guid: 8958d03a700290b4ebd0f97cf38aa251
+  - enabled: 0
+    path: Assets/Scenes/TestField.unity
+    guid: ba918088dfb59d2478fd2d99ca9ed7f4
   m_configObjects: {}
