@@ -16,6 +16,17 @@ public class ObjectHealth : MonoBehaviour
         {
             Health = 0;
         }
+        if (IsDead)
+        {
+            if (this.gameObject.tag == "Player")
+            {
+                print("Ded");
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     public void Heal(int healPoints)
