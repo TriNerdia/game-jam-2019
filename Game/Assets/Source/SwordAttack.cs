@@ -22,6 +22,9 @@ public class SwordAttack : MonoBehaviour
 
     public void PlayAttackAnimation()
     {
-        swordAnimation.Play("Attack");
+        if (transform.parent.tag == "Player") 
+            swordAnimation.Play("Attack");
+        else
+            swordAnimation.Play("Attack 1");
     }
 }
