@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1c55608eea90040a890e71bfa669e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
+  Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
 --- !u!1 &147020018
 GameObject:
@@ -1888,7 +1888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &392764821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1901,7 +1901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5091dad3931dcd4fa44fa51fc4ed39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {fileID: 516198548}
 --- !u!195 &392764822
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2494,12 +2493,6 @@ MeshFilter:
 --- !u!1 &516198540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4350260523196724378, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1824879518}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &516198548 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4350260523196724374, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
     type: 3}
   m_PrefabInstance: {fileID: 1824879518}
   m_PrefabAsset: {fileID: 0}
@@ -3498,7 +3491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1c55608eea90040a890e71bfa669e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
+  Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
 --- !u!1 &619990498
 GameObject:
@@ -3867,7 +3860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1c55608eea90040a890e71bfa669e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
+  Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
 --- !u!1 &725134096
 GameObject:
@@ -8397,7 +8390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1c55608eea90040a890e71bfa669e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 5652285684302238965, guid: 3ecd34f70cbb70743b4e3381deb99a02, type: 3}
+  Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
 --- !u!1 &1470283478
 GameObject:
