@@ -9,7 +9,7 @@ public class SphereEnemy : MonoBehaviour
     public string TargetTag = "Player";
     public bool IsAttacking { get; internal set; }
 
-    public KeyCode attackKey = KeyCode.L;
+    //public KeyCode attackKey = KeyCode.L;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class SphereEnemy : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(attackKey) || IsAttacking)
+        if (IsAttacking)
         {
             sword.PlayAttackAnimation();
         }
