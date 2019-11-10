@@ -57,16 +57,5 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Direction * MoveSpeed * Time.deltaTime);
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        // detects collision with an object named Pickup, duplicate script to add different kinds
-        if (collision.gameObject.tag == "power up")
-        {
-            //Remove the pickup from game
-            Destroy(collision.gameObject);
-            //increase health or add other affect to player
-            //Health += 10;
-        }
-    }
 }
 

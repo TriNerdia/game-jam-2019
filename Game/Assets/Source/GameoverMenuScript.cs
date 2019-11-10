@@ -16,6 +16,6 @@ public class GameoverMenuScript : MonoBehaviour
 
     void Scenechange()
     {
-        SceneManager.LoadScene("TestField", LoadSceneMode.Single);
+        SceneManager.LoadScene("Opening Menu", LoadSceneMode.Single);
     }
 }
