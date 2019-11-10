@@ -30,7 +30,7 @@ public class SphereEnemy : MonoBehaviour
         if (collider.CompareTag(TargetTag))
         {
             IsAttacking = true;
-            transform.LookAt(collider.transform);
+            transform.parent.LookAt(collider.transform);
         }
     }
 

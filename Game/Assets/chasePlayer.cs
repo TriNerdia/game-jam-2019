@@ -13,7 +13,7 @@ public class chasePlayer : MonoBehaviour
         goal = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
-        obj = GetComponent<SphereEnemy>();
+        obj = gameObject.transform.GetChild(2).GetComponent<SphereEnemy>();
     }
 
     void Update()
