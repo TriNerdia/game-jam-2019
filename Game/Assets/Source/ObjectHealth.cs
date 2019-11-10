@@ -9,6 +9,15 @@ public class ObjectHealth : MonoBehaviour
     public int MaxHealth = 100;
     public GameObject powerUp;
     public bool IsDead { get { return Health <= 0; } }
+    public TMPro.TMP_Text HPText;
+
+    public void Start()
+    {
+        if (tag == "Player")
+        {
+            HPText.text = Health + "/" + MaxHealth;
+        }
+    }
 
     public void TakeDamage(int damagePoints)
     {
@@ -29,6 +38,10 @@ public class ObjectHealth : MonoBehaviour
                 Instantiate(powerUp, transform.position, transform.rotation);
             }
         }
+        if(tag == "Player")
+        {
+            HPText.text = Health + "/" + MaxHealth;
+        }
     }
 
     public void Heal(int healPoints)
@@ -37,6 +50,10 @@ public class ObjectHealth : MonoBehaviour
         if (Health >= MaxHealth)
         {
             Health = MaxHealth;
+        }
+        if (tag == "Player")
+        {
+            HPText.text = Health + "/" + MaxHealth;
         }
     }
     void OnCollisionEnter(Collision collision)
