@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float MoveSpeed = 5f;
 
-    public Vector3 Direction;
+    private Vector3 Direction;
+    private Vector3 Rotation;
 
     public KeyCode moveUp = KeyCode.W;
     public KeyCode moveRight = KeyCode.D;
@@ -16,34 +17,46 @@ public class PlayerMovement : MonoBehaviour
     public void Update()
     {
         Direction = Vector3.zero;
+        Rotation = Vector3.zero;
 
         if (Input.GetKey(moveUp))
         {
-            Direction.y += 1;
+            Rotation.y += 1;
+            Direction = Vector3.up;
         }
 
         if (Input.GetKey(moveDown))
         {
-            Direction.y -= 1;
+            Rotation.y -= 1;
+            Direction = Vector3.up;
         }
 
         if (Input.GetKey(moveRight))
         {
-            Direction.x += 1;
+            Rotation.x += 1;
+            Direction = Vector3.up;
         }
 
         if (Input.GetKey(moveLeft))
         {
-            Direction.x -= 1;
+            Rotation.x -= 1;
+            Direction = Vector3.up;
         }
 
-        if (Direction.magnitude > 1)
+        if (Rotation != Vector3.zero)
         {
-            Direction.Normalize();
+            Quaternion rotate = Quaternion.LookRotation(Vector3.forward, Rotation);
+
+            // This is to prevent the rotation along these two axis. The game
+            // has 3d objects within a 2d scene.
+            rotate.x = 0;
+            rotate.y = 0;
+            transform.rotation = rotate;
         }
 
         transform.Translate(Direction * MoveSpeed * Time.deltaTime);
     }
+
     void OnCollisionEnter(Collision collision)
     {
         // detects collision with an object named Pickup, duplicate script to add different kinds
