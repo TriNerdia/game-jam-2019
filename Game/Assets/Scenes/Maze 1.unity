@@ -10304,6 +10304,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3941015657215590352, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
+        type: 3}
+      propertyPath: Health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941015657215590352, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
+        type: 3}
+      propertyPath: HPText
+      value: 
+      objectReference: {fileID: 1743288726}
     - target: {fileID: 4350260523196724368, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
         type: 3}
       propertyPath: m_UseGravity
@@ -10314,16 +10324,6 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 116
       objectReference: {fileID: 0}
-    - target: {fileID: 3941015657215590352, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
-        type: 3}
-      propertyPath: Health
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 3941015657215590352, guid: 0bcaa97eb37de415bb43558e84ef9a4b,
-        type: 3}
-      propertyPath: HPText
-      value: 
-      objectReference: {fileID: 1743288726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bcaa97eb37de415bb43558e84ef9a4b, type: 3}
 --- !u!1 &1874056887
