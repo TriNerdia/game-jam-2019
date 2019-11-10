@@ -38,4 +38,22 @@ public class ObjectHealth : MonoBehaviour
             Health = MaxHealth;
         }
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (this.gameObject.tag == "Player")
+        {
+            if (collision.gameObject.tag == "power up")
+            // detects collision with an object named power up, duplicate script to add different kinds
+            {
+                //Remove the pickup from game
+                Destroy(collision.gameObject);
+                //increase health or add other affect to player
+                Heal(10);
+            }
+
+
+        }
+            
+           
+    }
 }

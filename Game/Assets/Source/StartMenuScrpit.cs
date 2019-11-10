@@ -16,6 +16,6 @@ public class StartMenuScrpit : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene("TestField", LoadSceneMode.Single);
+        SceneManager.LoadScene("Maze 1", LoadSceneMode.Single);
     }
 }
