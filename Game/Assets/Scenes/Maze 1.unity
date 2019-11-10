@@ -473,9 +473,10 @@ GameObject:
   - component: {fileID: 94159971}
   - component: {fileID: 94159970}
   - component: {fileID: 94159973}
+  - component: {fileID: 94159974}
   m_Layer: 0
   m_Name: Portal (2)
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,6 +568,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
+--- !u!114 &94159974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94159968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaeaa2247f0f42c9b5a78e47c4d09fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 200
+  MaxHealth: 200
 --- !u!1 &147020018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,9 +3414,10 @@ GameObject:
   - component: {fileID: 603257070}
   - component: {fileID: 603257069}
   - component: {fileID: 603257072}
+  - component: {fileID: 603257073}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3493,6 +3509,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
+--- !u!114 &603257073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603257067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaeaa2247f0f42c9b5a78e47c4d09fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 200
+  MaxHealth: 200
 --- !u!1 &619990498
 GameObject:
   m_ObjectHideFlags: 0
@@ -3768,9 +3798,10 @@ GameObject:
   - component: {fileID: 712168125}
   - component: {fileID: 712168124}
   - component: {fileID: 712168127}
+  - component: {fileID: 712168128}
   m_Layer: 0
   m_Name: Portal (1)
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3862,6 +3893,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
+--- !u!114 &712168128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712168122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaeaa2247f0f42c9b5a78e47c4d09fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 200
+  MaxHealth: 200
 --- !u!1 &725134096
 GameObject:
   m_ObjectHideFlags: 0
@@ -8298,9 +8343,10 @@ GameObject:
   - component: {fileID: 1457645088}
   - component: {fileID: 1457645087}
   - component: {fileID: 1457645090}
+  - component: {fileID: 1457645091}
   m_Layer: 0
   m_Name: Portal (3)
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8392,6 +8438,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3376672736656544403, guid: 08b982bc5b3db468db177873a5a14962, type: 3}
   SpawnDelay: 5
+--- !u!114 &1457645091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457645085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaeaa2247f0f42c9b5a78e47c4d09fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 200
+  MaxHealth: 200
 --- !u!1 &1470283478
 GameObject:
   m_ObjectHideFlags: 0
