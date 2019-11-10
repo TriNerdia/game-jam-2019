@@ -239,7 +239,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1413400602863391190
 MonoBehaviour:
@@ -378,3 +378,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordAnimation: {fileID: 0}
+  swordDamage: 10
