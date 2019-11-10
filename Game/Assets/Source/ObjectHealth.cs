@@ -7,7 +7,7 @@ public class ObjectHealth : MonoBehaviour
 {
     public int Health = 100;
     public int MaxHealth = 100;
-
+    public GameObject powerUp;
     public bool IsDead { get { return Health <= 0; } }
 
     public void TakeDamage(int damagePoints)
@@ -26,6 +26,7 @@ public class ObjectHealth : MonoBehaviour
             else
             {
                 Destroy(this.gameObject);
+                Instantiate(powerUp, transform.position, transform.rotation);
             }
         }
     }

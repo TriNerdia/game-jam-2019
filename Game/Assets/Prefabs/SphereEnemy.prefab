@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   MaxHealth: 100
+  powerUp: {fileID: 4964288603200149276, guid: 1dc1ac8acc0db3547876714296a102c1, type: 3}
 --- !u!114 &920325297403719478
 MonoBehaviour:
   m_ObjectHideFlags: 0
